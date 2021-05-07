@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+
+    <title>Ecommerce Video Game | Cart</title>
+
+    <!-- Loading third party fonts -->
+
+    <link href="https://cdn.jsdelivr.net/gh/akottr/dragtable@master/dragtable.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/gh/akottr/dragtable@master/jquery.dragtable.js"></script>
+    <script
+            src="https://unpkg.com/bootstrap-table@1.18.3/dist/extensions/reorder-columns/bootstrap-table-reorder-columns.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,700|" rel="stylesheet" type="text/css">
+    <link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../fonts/lineo-icon/style.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Loading main css file -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../logo.css">
+
+    <!--[if lt IE 9]>
+    <script src="../js/ie-support/html5.js"></script>
+    <script src="../js/ie-support/respond.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body>
+
+<div id="site-content">
+    <div class="site-header">
+        <div class="container">
+            <a href="index.html">
+                <div class="this" style="">
+                    <div class="perspective">
+                        <div class="sq"></div>
+                        <div class="s1"></div>
+                        <div class="s2"></div>
+                        <div class="s3"></div>
+                        <div class="s4"></div>
+                    </div>
+                    <div class="text">gamepyramid</div>
+                </div>
+                <div class="logo-text">
+                    <h1 class="site-title">Company name</h1>
+                    <small class="site-description">Tagline goes here</small>
+                </div>
+            </a> <!-- #branding -->
+
+            <div class="right-section pull-right">
+                <a href="cart.html" class="cart"><i class="icon-cart"></i> 0 items in cart</a>
+                <a href="#">My Account</a>
+                <a href="#">Logout <small>(John Smith)</small></a>
+            </div> <!-- .right-section -->
+
+            <div class="main-navigation">
+                <button class="toggle-menu"><i class="fa fa-bars"></i></button>
+                <ul class="menu">
+                    <li class="menu-item home current-menu-item"><a href="index.html"><i class="icon-home"></i></a></li>
+                    <li class="menu-item"><a href="products.html">Accessories</a></li>
+                    <li class="menu-item"><a href="products.html">Promotions</a></li>
+                    <li class="menu-item"><a href="products.html">PC</a></li>
+                    <li class="menu-item"><a href="products.html">Playstation</a></li>
+                    <li class="menu-item"><a href="products.html">Xbox</a></li>
+                    <li class="menu-item"><a href="products.html">Wii</a></li>
+                    <li class="menu-item"><a href="tables.html">Table</a></li>
+                </ul> <!-- .menu -->
+                <div class="search-form">
+                    <label><img src="../images/icon-search.png"></label>
+                    <input type="text" placeholder="Search...">
+                </div> <!-- .search-form -->
+
+                <div class="mobile-navigation"></div> <!-- .mobile-navigation -->
+            </div> <!-- .main-navigation -->
+
+            <div class="breadcrumbs">
+                <div class="container">
+                    <a href="index.html">Home</a>
+                    <span>Table</span>
+                </div>
+            </div>
+        </div> <!-- .container -->
+    </div> <!-- .site-header -->
+    <main class="main-content">
+        <div class="container">
+            <div class="page">
+
+                <p style="color: #111111">Please enter the specifications to add a game</p>
+
+                <form>
+                    <label for="id" style="color: #111111">ID</label><br>
+                    <input type="text" id="id" name="fname"><br>
+                    <label for="release" style="color: #111111">Release date</label><br>
+                    <input type="text" id="release" name="lname"><br>
+                    <label for="gamename" style="color: #111111">Game Name</label><br>
+                    <input type="text" id="gamename" name="fname"><br>
+                    <label for="rating" style="color: #111111">Rating</label><br>
+                    <input type="text" id="rating" name="lname"><br>
+                    <label for="summary" style="color: #111111">Summary</label><br>
+                    <input type="text" id="summary" name="fname"><br>
+                    <label for="url" style="color: #111111">URL</label><br>
+                    <input type="text" id="url" name="fname"><br>
+                    <br>
+                    <button type="button" id="updateButton" class="btn btn-primary" onclick="productUpdater();">Add
+                    </button>
+                </form>
+
+
+            </div>
+        </div> <!-- .container -->
+    </main> <!-- .main-content -->
+
+    <div class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="widget">
+                        <h3 class="widget-title">Information</h3>
+                        <ul class="no-bullet">
+                            <li><a href="#">Site map</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div> <!-- .widget -->
+                </div> <!-- column -->
+                <div class="col-md-2">
+                    <div class="widget">
+                        <h3 class="widget-title">Consumer Service</h3>
+                        <ul class="no-bullet">
+                            <li><a href="#">Secure</a></li>
+                            <li><a href="#">Shipping &amp; Returns</a></li>
+                            <li><a href="#">Shipping</a></li>
+                            <li><a href="#">Orders &amp; Returns</a></li>
+                            <li><a href="#">Group Sales</a></li>
+                        </ul>
+                    </div> <!-- .widget -->
+                </div> <!-- column -->
+                <div class="col-md-2">
+                    <div class="widget">
+                        <h3 class="widget-title">My Account</h3>
+                        <ul class="no-bullet">
+                            <li><a href="#">Login/Register</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Cart</a></li>
+                            <li><a href="#">Order Tracking</a></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </div> <!-- .widget -->
+                </div> <!-- column -->
+                <div class="col-md-6">
+                    <div class="widget">
+                        <h3 class="widget-title">Join our newsletter</h3>
+                        <form action="#" class="newsletter-form">
+                            <input type="text" placeholder="Enter your email...">
+                            <input type="submit" value="Subsribe">
+                        </form>
+                    </div> <!-- .widget -->
+                </div> <!-- column -->
+            </div><!-- .row -->
+
+            <div class="colophon">
+                <div class="copy">Copyright 2014 Company name. Designed by Themezy. All rights reserved.</div>
+                <div class="social-links square">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                </div> <!-- .social-links -->
+            </div> <!-- .colophon -->
+        </div> <!-- .container -->
+    </div> <!-- .site-footer -->
+</div>
+
+<div class="overlay"></div>
+
+<div class="auth-popup popup">
+    <a href="#" class="close"><i class="fa fa-times"></i></a>
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="section-title">Login</h2>
+            <form action="#">
+                <input type="text" placeholder="Username...">
+                <input type="password" placeholder="Password...">
+                <input type="submit" value="Login">
+            </form>
+        </div> <!-- .column -->
+        <div class="col-md-6">
+            <h2 class="section-title">Create an account</h2>
+            <form action="#">
+                <input type="text" placeholder="Username...">
+                <input type="text" placeholder="Email address...">
+                <input type="submit" value="register">
+            </form>
+        </div> <!-- .column -->
+    </div> <!-- .row -->
+</div> <!-- .auth-popup -->
+
+<script>
+
+    var $table = $('#table');
+    var $button = $('#button')
+    var $button2 = $('#button2')
+    var data = []
+
+
+    function scoreFormat(score) {
+        const formatted = parseFloat(score.toFixed(1));
+        return formatted;
+    }
+
+
+    function detailDetail(index, row) {
+        var html = []
+        $.each(row, function (key, value) {
+           console.log(value)
+            if(key == "url"){
+                html.push('<a target="_blank" href="' + value + '">Link</a>')
+            }else{
+
+                html.push('<p><b>' + key + ': </b>' + value + '</p>')
+            }
+        })
+        return html.join('')
+    }
+
+
+    function nameFormatter(value) {
+        return '<a target="_blank" href="' + value + '">Link</a>'
+    }
+
+
+    function timeConverter(UNIX_timestamp) {
+        var a = new Date(UNIX_timestamp * 1000);
+        var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        var year = a.getFullYear();
+        var month = months[a.getMonth()];
+        var date = a.getDate();
+
+        var time = date + ' ' + month + ' ' + year;
+        return time;
+    }
+
+    console.log(timeConverter(0));
+    function productUpdater() {
+        if ($("#gamename").val() != null && $("#gamename").val() != '') {
+            // Add product to Table
+            productAddToTable();
+
+            // Clear form fields
+            formClear();
+
+            // Focus to product name field
+            $("#gamename").focus();
+        }
+    }
+
+    function formClear() {
+        $("#id").val("");
+        $("#release").val("");
+        $("#gamename").val("");
+        $("#rating").val("");
+        $("#summary").val("");
+        $("#url").val("");
+    }
+
+
+    function productAddToTable() {
+        var newProduct = []
+        newProduct.push(
+            {'"id"': $("#id").val()
+                    , ',"first_release_date"' : $("#release").val()
+                    , ',"name"' : $("#gamename").val()
+                    , ',"rating"' : $("#rating").val()
+                    , ',"summary"' : $("#summary").val()
+                    , ',"url"' : $("#url").val()
+            })
+
+        data.push(newProduct)
+        console.log(data)
+    }
+
+
+
+
+    $(function () {
+
+        $button.click(function () {
+            $table.bootstrapTable('expandRow', 1)
+        })
+        $button2.click(function () {
+            $table.bootstrapTable('collapseRow', 1)
+        })
+
+
+        data.push(
+
+                {
+                    "id": 25358,
+                    "first_release_date": 961632000,
+                    "name": "Deus Ex: Game of the Year Edition",
+                    "rating": 97.98027450364239,
+                    "summary": "The year is 2052 and the world is a dangerous and chaotic place. Terrorists operate openly - killing thousands; drugs, disease and pollution kill even more. The world's economies are close to collapse and the gap between the insanely wealthy and the desperately poor grows ever wider.",
+                    "url": "https://www.igdb.com/games/deus-ex-game-of-the-year-edition"
+                },
+                {
+                    "id": 55771,
+                    "first_release_date": 1556582400,
+                    "name": "Fell Seal: Arbiter's Mark",
+                    "rating": 97.8226531980032,
+                    "summary": "Fell Seal: Arbiter's Mark is a story-driven, turn-based tactical RPG set in a fantasy world with a touch of steampunk. Take control of the Arbiter Kyrie, an agent of the Immortal Council tasked with preserving stability and order throughout the land, and lead your troops through difficult encounters.\n\nExperience an epic and mature story, unfolding through over 40 story encounters and topped with challenging end-game content.\n\nClassic tactical combat battles, with rugged terrain and elevation, taking place on beautiful hand-drawn environments.\n\nA deep and complex class system with over 30 classes and 300 abilities lets you truly customize every one of your characters through the selection of their class, sub-class and passives. Carefully craft the character you envision, be it a versatile generalist, a dedicated spell-caster or a mighty foe-crushing specialist!\n\nCustomize your troops' appearance your way, by selecting their portrait, outfit, colors and overall visuals from a wide selection.\n\nEquip your army with over 240 pieces of equipment, either purchased, gathered from fallen enemies or created from crafting.",
+                    "url": "https://www.igdb.com/games/fell-seal-arbiters-mark"
+                },
+                {
+                    "id": 35282,
+                    "first_release_date": 1537401600,
+                    "name": "CrossCode",
+                    "rating": 97.71470268921449,
+                    "summary": "A retro-inspired 2D Action RPG set in the distant future. CrossCode combines 16-bit SNES-style graphics with butter-smooth physics, a fast-paced combat system, and engaging puzzle mechanics, served with a gripping sci-fi story.",
+                    "url": "https://www.igdb.com/games/crosscode"
+                },
+                {
+                    "id": 55322,
+                    "first_release_date": 1558569600,
+                    "name": "Pathologic 2",
+                    "rating": 97.7017622345229,
+                    "summary": "Pathologic 2 is a narrative-driven dramatic thriller about fighting a deadly outbreak in a secluded rural town. You are a healer, and to save anyone, you'll have to survive in this bleak and strange world, where even food and medicine are scarce.",
+                    "url": "https://www.igdb.com/games/pathologic-2"
+                },
+                {
+                    "id": 119402,
+                    "first_release_date": 1571097600,
+                    "name": "The Witcher 3: Wild Hunt - Complete Edition",
+                    "rating": 97.69162746821021,
+                    "summary": "Winner of over 250 Game of the Year awards, The Witcher 3: Wild Hunt is a story-driven, open world adventure set in a dark fantasy universe.\nYou are Geralt of Rivia, mercenary monster slayer. At your disposal is every tool of the trade: razor-sharp swords, lethal mixtures, stealthy\ncrossbows, and powerful combat magic. Before you stands a war-torn, monster-infested continent you can explore at will. Your current\ncontract? Tracking down the Child of Prophecy, a living weapon that can alter the shape of the world.\nThe Complete Edition contains every piece of downloadable content released for the game, including two massive story expansions: Hearts of\nStone & Blood and Wine. It's the perfect opportunity to enter this world for the first time or relive the adventure — on the go!",
+                    "url": "https://www.igdb.com/games/the-witcher-3-wild-hunt-complete-edition--1"
+                },
+                {
+                    "id": 27034,
+                    "first_release_date": 1485734400,
+                    "name": "Linelight",
+                    "rating": 97.4327276761992,
+                    "summary": "Linelight is an elegant puzzle game set in a world of lines.",
+                    "url": "https://www.igdb.com/games/linelight"
+                },
+                {
+                    "id": 12329,
+                    "first_release_date": 1130457600,
+                    "name": "Fate/hollow ataraxia",
+                    "rating": 97.3457365088475,
+                    "summary": "Fate/hollow ataraxia is a Japanese visual novel game and the sequel to Fate/stay night. The word ataraxia in the title is a Greek term for tranquility, giving the title the combined meaning of \"empty (or false) tranquility\". The plot of Fate/hollow ataraxia is based half a year after the events of Fate/stay night. Like its preceding counterpart, the story is set in Fuyuki City. Bazett Fraga McRemitz, a member of the Mages' Association and a master in the Fifth Holy Grail War, wakes on the fourth day of the Fifth Holy Grail war with a new servant, Avenger, and no memory of what happened to her beforehand. She and Avenger set off to fight and win the Holy Grail War.",
+                    "url": "https://www.igdb.com/games/fate-slash-hollow-ataraxia"
+                },
+                {
+                    "id": 11270,
+                    "first_release_date": 1354320000,
+                    "name": "The Cat Lady",
+                    "rating": 97.2879941875931,
+                    "summary": "Susan Ashworth, known in her neighbourhood as the crazy Cat Lady, is a lonely 40- year old on the verge of suicide. She has no family, no friends and no hope for a better future.One day she discovers that five strangers will come along and change everything.But those five, \"The Parasites\", are also the most ruthless, deranged and cold-blooded bunch of psychopaths the city has ever known. They will stop at nothing to hurt Susan. Unless, she hurts them first... \n \nSusan's few weeks journey doesn't take her across the world and won't turn her into a hero. She has little faith in others and hardly even cares about herself. She can't fight and has never fired a gun in her life. But she's hanging onto that thin thread of hope, that in the end, as promised, there's an elusive reward waiting for her. Something worth trying for. Something that'll help her find an unlikely friend. Something that'll give her life a purpose. Susan's journey takes her on a roller-coaster ride between the world of the living and the world of the dead, where the only way to survive is to overcome her biggest weakness: her own self.",
+                    "url": "https://www.igdb.com/games/the-cat-lady"
+                },
+                {
+                    "id": 9143,
+                    "first_release_date": 1048636800,
+                    "name": "Guilty Gear X2 #Reload",
+                    "rating": 97.26461864004901,
+                    "summary": "As humanity endeavored to better themselves, they created the biological marvel known as Gears. Originally intended as the next step of human evolution, they were instead fitted for war and turned against their own creators.",
+                    "url": "https://www.igdb.com/games/guilty-gear-x2-number-reload"
+                },
+                {
+                    "id": 23701,
+                    "first_release_date": 1045267200,
+                    "name": "A Tale in the Desert",
+                    "rating": 97.2413793103448,
+                    "summary": "A Tale in the Desert (ATITD) is a massively multiplayer online roleplaying game (MMORPG) set in Ancient Egypt, run by the independent company Desert Nomad Studios. The initial software download and all new content are free, with a monthly subscription required to play beyond the first 24 hours.",
+                    "url": "https://www.igdb.com/games/a-tale-in-the-desert"
+                },
+                {
+                    "id": 139403,
+                    "first_release_date": 1602720000,
+                    "name": "Jungles of Maxtheria",
+                    "rating": 97.09090909090911,
+                    "summary": "Play as either \"Hot Spot\" Harvey, his cousin Roxy Roks, Junior or Missy searching for the lost treasure of the infamous \"Jaxton Max\". Your quest for fortune and glory will not be easy however. This adventure is full of baddies aimed at stopping you dead in your tracks. Use knives to dig through walls, bullets to battle the baddies, grappling hooks to jump over long distances, oxygen tanks to breath under water and torches to see what lurks underground. Collect keys to get past locked doors and to open treasure chests. Avoid the quicksand, tar pits, spikes, fire pits, thumpers and other traps along the way. Few ever return from their expeditions into the deep jungles. So, if you are brave enough, the \"Jungles of Maxtheria\" awaits!",
+                    "url": "https://www.igdb.com/games/jungles-of-maxtheria"
+                },
+                {
+                    "id": 24930,
+                    "first_release_date": 1212624000,
+                    "name": "OFF",
+                    "rating": 96.99596487400188,
+                    "summary": "The player is tasked with controlling the Batter and guiding him on his quest to \"purify\" the world of spirits. The player must take the Batter through the various Zones, collect battle partners, solve puzzles and partake in turn-based Active Time Battles in order to get to the source of the impurity.",
+                    "url": "https://www.igdb.com/games/off"
+                },
+                {
+                    "id": 28337,
+                    "first_release_date": 1574899200,
+                    "name": "13 Sentinels: Aegis Rim",
+                    "rating": 96.968707668303,
+                    "summary": "Uncover the truth and delve into a 2D sidescrolling adventure featuring gorgeous art and environments. Then, battle the kaiju in fast-paced, top-down combat. Customize the Sentinels with an arsenal of mechsuit weaponry, and fight to defend humanity!",
+                    "url": "https://www.igdb.com/games/13-sentinels-aegis-rim"
+                },
+                {
+                    "id": 7406,
+                    "first_release_date": 1196985600,
+                    "name": "Aquaria",
+                    "rating": 96.9057215612062,
+                    "summary": "AN UNDERWATER FANTASY WORLD TO EXPLORE \n \nA massive ocean world, teeming with life and filled with ancient secrets. Join Naija, a lone underwater dweller in search of her family, as she explores the depths of Aquaria. She'll travel from hidden caves, shrouded in darkness, to beautiful, sunlit oases, all lovingly handcrafted by its two creators. \n \nNaija's story, narrated fully with voice overs, will become yours, as you join her on this magnificent adventure. \n \nMAGIC AND COMBAT AT A MOUSE-CLICK \n \nNaija has the gift of the Verse. By singing songs, she can weave this force to change the waters around her. With each song Naija learns comes new abilities. With powerful songs, Naija is able to change form, giving players many options as to how to play the game. \n \nAnd with Aquaria's intuitive mouse-only control system, it's as easy to make Naija swim gracefully through the waters as it is to have her sing, cast spells, and engage in combat with the numerous dangerous creatures that inhabit Aquaria's waters. \n \nThe Xbox 360 controller and FPS style mouse / keyboard controls are also supported. \n \n \nCREATE YOUR OWN WORLDS \n \nThe full version of Aquaria includes the level editor and modding tools which we used to develop the game. Easy to pick up and learn, you'll be able to make your own worlds, and even add your own graphics and music. The powerful Aquaria level editor allows you to test your creations while you play the game!",
+                    "url": "https://www.igdb.com/games/aquaria"
+                },
+                {
+                    "id": 55077,
+                    "first_release_date": 1503446400,
+                    "name": "Beast Battle Simulator",
+                    "rating": 96.82821618878461,
+                    "summary": "Beast Battle Simulator is a physics based battle-simulation sandbox game featuring dinosaurs and animals. Kamikaze Zebras VS. T-Rex with laser guns, Lions with machine guns VS. a flock of 50 seagulls; anything is possible! Watch as the beasts dismember and rip each other apart in gory detail!",
+                    "url": "https://www.igdb.com/games/beast-battle-simulator"
+                },
+                {
+                    "id": 13166,
+                    "first_release_date": 1464652800,
+                    "name": "The Witcher 3: Wild Hunt - Blood and Wine",
+                    "rating": 96.760248345566,
+                    "summary": "Blood and Wine is the second major expansion to The Witcher 3: Wild Hunt. \n \nThe players will accompany Geralt of Rivia to the region of Toussaint, one of the few places in the Witcher universe which has remained largely untouched by the war. The calm, laid-back atmosphere holds a dark and bloody secret that only the White Wolf can uncover; the expansion features brand new items for us to collect on our adventure and also introduces previously unknown characters.",
+                    "url": "https://www.igdb.com/games/the-witcher-3-wild-hunt-blood-and-wine"
+                },
+                {
+                    "id": 12987,
+                    "first_release_date": 1442880000,
+                    "name": "System Shock: Enhanced Edition",
+                    "rating": 96.5581171395545,
+                    "summary": "Exactly twenty one years after its first release, System Shock is back! The Enhanced Edition adds a modern touch to this true classic gem, without taking anything from its unmistakable atmosphere. See for yourself that the game that has been called the benchmark for intelligent first-person gaming, has lost nothing of its ability to keep you on the edge of your seat. \n\nYou're a renowned hacker, the most notorious cyberspace thief in the corporate world. Caught during a risky break-in, you become indentured to Diego, a greedy Trioptium exec who bankrolls a rare cyberjack implant operation. After six months in a healing coma, you awaken to the twisted aftermath of a terrible disaster. Where are the surgeons? Why is the station in such disrepair? Slowly, the chilling realization that something is very wrong creeps over you.\n\nOnce a prime corporate research facility, Citadel now teems with mindless cyborgs, robots and terribly mutated beings, all programmed to serve SHODAN, a ruthless A.I. There's scarcely time to think before it unleashes the first terror...",
+                    "url": "https://www.igdb.com/games/system-shock-enhanced-edition"
+                },
+                {
+                    "id": 2985,
+                    "first_release_date": 1339718400,
+                    "name": "Persona 4 Golden",
+                    "rating": 96.4272026757186,
+                    "summary": "An enhanced rerelease of Shin Megami Tensei: Persona 4 (2008) featuring quality-of-life improvements, gameplay enhancements, new locations, balance tweaks, online functionality, new difficulty options, an additional side character storyline and a changed endgame.",
+                    "url": "https://www.igdb.com/games/persona-4-golden"
+                },
+                {
+                    "id": 42931,
+                    "first_release_date": 1448582400,
+                    "name": "Bloodborne: Game Of The Year Edition",
+                    "rating": 96.41589416864039,
+                    "summary": "With new story details, learn the tale of hunters who once made Yharnam their hunting grounds, meet new NPCs, and discover another side of the history and world of Bloodborne. Includes: \nThe Original Bloodborne Experience / Bloodborne: The Old Hunters Expansion / Bloodborne: The Old Hunters",
+                    "url": "https://www.igdb.com/games/bloodborne-game-of-the-year-edition"
+                },
+                {
+                    "id": 51485,
+                    "first_release_date": 1505865600,
+                    "name": "Super Fancy Pants Adventure",
+                    "rating": 96.3932802067629,
+                    "summary": "Super Fancy Pants Adventure is a wild free-running adventure with buttery smooth platforming and a slick fountain pen!",
+                    "url": "https://www.igdb.com/games/super-fancy-pants-adventure"
+                },
+                {
+                    "id": 116794,
+                    "first_release_date": 1518480000,
+                    "name": "Kingdom Come: Deliverance - Royal Edition",
+                    "rating": 96.3857671564065,
+                    "summary": "Kingdom Come: Deliverance is a story-driven open-world RPG that immerses you in an epic adventure in the Holy Roman Empire. Avenge your parents' death as you battle invading forces, go on game-changing quests, and make influential choices. Explore majestic castles, deep forests, thriving villages and countless other realistic settings in medieval Bohemia!",
+                    "url": "https://www.igdb.com/games/kingdom-come-deliverance-royal-edition"
+                },
+                {
+                    "id": 143335,
+                    "first_release_date": 1592006400,
+                    "name": "DinoScape",
+                    "rating": 96.3636363636364,
+                    "summary": "As a brave caveman, save the dinosaurs from extinction! Try to escape from meteorids, lava, sharp teeth and deep abysses together with your riding dinosaur.",
+                    "url": "https://www.igdb.com/games/dinoscape"
+                },
+                {
+                    "id": 7194,
+                    "first_release_date": 1255564800,
+                    "name": "Steins;Gate",
+                    "rating": 96.35246357402741,
+                    "summary": "Steins;Gate is a Japanese visual novel developed by 5pb. and Nitroplus. It is the second game in the Science Adventure series following Chaos;Head. The game is described by the development team as a \"hypothetical science ADV\" and explores time and time travel in 2010 Akihabara. The gameplay follows non-linear plot lines which offer branching scenarios with courses of interaction.",
+                    "url": "https://www.igdb.com/games/steins-gate"
+                },
+                {
+                    "id": 26472,
+                    "first_release_date": 1571097600,
+                    "name": "Disco Elysium",
+                    "rating": 96.3109330585188,
+                    "summary": "A CRPG in which, waking up in a hotel room a total amnesiac with highly opinionated voices in his head, a middle-aged detective on a murder case inadvertently ends up playing a part in the political dispute between a local labour union and a larger international body, all while struggling to piece together his past, diagnose the nature of the reality around him and come to terms with said reality.",
+                    "url": "https://www.igdb.com/games/disco-elysium"
+                },
+                {
+                    "id": 10039,
+                    "first_release_date": 1543536000,
+                    "name": "Superfighters Deluxe",
+                    "rating": 96.2974437584637,
+                    "summary": "Superfighters Deluxe is a multiplayer 2D action game where little flat-headed men fight to the death in small and highly destructible arenas. Surviving each round takes skill, strategy and luck.",
+                    "url": "https://www.igdb.com/games/superfighters-deluxe"
+                },
+                {
+                    "id": 19069,
+                    "first_release_date": 1092528000,
+                    "name": "Imperishable Night",
+                    "rating": 96.2003638585461,
+                    "summary": "Imperishable Night features a total of eight playable characters, in pre-set pairs (and later, individually). The pairs work in tandem: one person fires when unfocused, while the other pops in and fires when focused, with a reduction in movement speed. The two attacks can be drastically different. The individual characters do not have an attack change when focused, with the exception of Remilia.\n\nQuite a few smaller details are unique to this game, including Last Spells - for an enemy, a Last Spell is a bonus Spell Card which the player can tackle without fear of losing lives/bombs. On the player side, Last Spells are secondary \"bomb\" Spell Cards, which last longer/do much more damage at the expense of two bomb stocks. There is a gauge which tracks how human/youkai (normal/focused) you are, as well as a new \"Time\" system, which affects gameplay.",
+                    "url": "https://www.igdb.com/games/imperishable-night"
+                },
+                {
+                    "id": 41621,
+                    "first_release_date": 1541116800,
+                    "name": "Football Manager 2019",
+                    "rating": 96.0995920346536,
+                    "summary": "Football Manager 2019 is YOUR opportunity to take control of the club you love when the new season begins on November 2nd. New features and upgrades bring you closer to your squad than ever before and tilts the world’s favourite management simulation even closer to reality. Welcome to the job!",
+                    "url": "https://www.igdb.com/games/football-manager-2019"
+                },
+                {
+                    "id": 36550,
+                    "first_release_date": 1579132800,
+                    "name": "Yakuza: Like a Dragon",
+                    "rating": 96.09082776707399,
+                    "summary": "Become Ichiban Kasuga, a low-ranking yakuza grunt left on the brink of death by the man he trusted most. Take up your legendary bat and get ready to crack some underworld skulls in dynamic RPG combat set against the backdrop of modern-day Japan.",
+                    "url": "https://www.igdb.com/games/yakuza-like-a-dragon"
+                },
+                {
+                    "id": 113344,
+                    "first_release_date": 1567728000,
+                    "name": "Monster Hunter: World - Iceborne",
+                    "rating": 96.0101835072176,
+                    "summary": "Let your hunting instinct take you further than ever! \"Iceborne\" is a massive expansion that picks up after the ending of Monster Hunter: World and opens up the new \"master rank!\" New quests, monsters, weapons, armor, and story await to take your hunting to the next level.",
+                    "url": "https://www.igdb.com/games/monster-hunter-world-iceborne"
+                },
+                {
+                    "id": 94969,
+                    "first_release_date": 1539043200,
+                    "name": "Mark of the Ninja Remastered",
+                    "rating": 95.88577053004829,
+                    "summary": "In Mark of the Ninja: Remastered, you'll know what it is to truly be a ninja. You must be silent, agile and clever to outwit your opponents in a world of gorgeous scenery and flowing animation.",
+                    "url": "https://www.igdb.com/games/mark-of-the-ninja-remastered"
+                },
+                {
+                    "id": 54662,
+                    "first_release_date": 1510272000,
+                    "name": "Football Manager 2018",
+                    "rating": 95.8656898402103,
+                    "summary": "They say football is a game of opinions and everyone has theirs, but it’s only yours that counts around here. \n \nYou make the decisions now, from who you sign and who you sell, to how you manage your budget. Will you build tactics around the players at your disposal or train them in your vision of how the game should be played? Who you pick and who you bench will affect squad harmony, and it’s up to you to manage it. Every decision comes back to you. \n \nGet it right and you’ll be the star of the show, grabbing the newspaper headlines and dominating trends on social media. They’ll write your name in footballing folklore…if you succeed, of course. \n \nWith unparalleled choices both on and off the pitch, all within the immersive footballing world, it’s time to decide what kind of manager do you want to be? \n \nTry your hand in 50 of the biggest footballing countries \nWin the title with any one of world’s top 2500 clubs \nPlay the transfer market with over 600,000 real players and staff \nWatch your football vision come to life before your very eyes \n \nAll purchases of Football Manager 2018 also include a free copy of Football Manager Touch 2018 for PC/Mac and Linux. \n \nNew for this season! \n \nDynamics – A harmonious squad produces better results on the pitch. By building partnerships amongst your players – both on and off the pitch – and maintaining a good dressing room atmosphere you’ll get the best performances out of your squad. \n \nMatchday Live – A brand new graphics engine produces the best lighting, stadiums and player models in the series’ history, alongside a sleeker match interface and modernised presentation that bring your fixtures to life. \n \nReal World Scouting System – A true-to-life representation of the techniques used by the world’s biggest clubs including more detailed data analysis that, combined with a wider range of scouting options, give you a better overview of any potential signing. \n \nSports Science – The new Medical Centre gives you a more complete overview of your squad’s injury situation, with your medical team providing advice on feedback on individual players’ injury risks and how to avoid injuries occurring during training. \n \nTactics – A redesigned tactics screen puts analysis at its heart, giving you a clear view of whether your tactic is working. The new pre-match briefing allows you to be better prepared for your upcoming fixtures, while new player roles give you more ways to exploit your players’ abilities. \n \nFantasy Draft – Redesigned with a new interface that is perfect for streaming and with several new setup options that help tailor the Fantasy Draft experience to you, including a bigger squad budget and a Quick Start option. \n \nFootball Intelligence – A realistic transfer market that reflects the inflated transfer fees and contract values, more clauses to help finalise that blockbuster deal and the more intelligent transfer and board AI that take into account more contextual information from the game world.",
+                    "url": "https://www.igdb.com/games/football-manager-2018"
+                },
+                {
+                    "id": 76244,
+                    "first_release_date": 1436400000,
+                    "name": "The Great Ace Attorney: Adventures",
+                    "rating": 95.7814668776915,
+                    "summary": "The Great Ace Attorney: Adventures is the ninth installment of the Ace Attorney series of text adventure video games, originally released on the Nintendo 3DS.\n\nSet in the late 19th century during Japan's Meiji Period and Britain's Victorian era, the game tells the story of an ancestor of Phoenix Wright, Ryunosuke Naruhodo, who works to sleuth out the truth in witnesses’ testimonies and clear his clients’ names in court alongside a cast of characters - including local ace detective Herlock Sholmes.\n\nNew gameplay mechanics introduced to the series include Dance of Deduction, in which Ryunosuke must deduce mistakes and oversights in Herlock's overboard logic and uncover new facts, and Summation Examination, in which players must point out discrepancies among jurors' arguments to make their defendant’s case and ultimately secure a “Not Guilty” verdict.",
+                    "url": "https://www.igdb.com/games/the-great-ace-attorney-adventures--1"
+                },
+                {
+                    "id": 9262,
+                    "first_release_date": 788832000,
+                    "name": "The Incredible Machine 2",
+                    "rating": 95.49388972143379,
+                    "summary": "This game involves puzzle solving, while creating wacky machines. Each level of the game contains a machine designed to do a specific task. The only problem is, there are parts missing, and it is your job to figure out where to put what in order to get the machine to work. The game features many wacky machine parts, including cats, super balls, lava lamps, flashlights, can openers, monkeys on treadmills, and many more wacky parts to get your machine working. The game also comes with an editor to let you design your own unique machines from scratch. These can either be for fun, or you can set it so that the person playing has to fill in the missing parts, just like in the campaign.",
+                    "url": "https://www.igdb.com/games/the-incredible-machine-2"
+                },
+                {
+                    "id": 98077,
+                    "first_release_date": 1524182400,
+                    "name": "Grand Theft Auto V: Premium Online Edition",
+                    "rating": 95.46466870948329,
+                    "summary": "The Grand Theft Auto V: Premium Online Edition includes the complete Grand Theft Auto V story experience, free access to the ever evolving Grand Theft Auto Online and all existing gameplay upgrades and content including The Doomsday Heist, Gunrunning, Smuggler’s Run, Bikers and much more. You’ll also get the Criminal Enterprise Starter Pack, the fastest way to jumpstart your criminal empire in Grand Theft Auto Online.",
+                    "url": "https://www.igdb.com/games/grand-theft-auto-v-premium-online-edition"
+                },
+                {
+                    "id": 1942,
+                    "first_release_date": 1431993600,
+                    "name": "The Witcher 3: Wild Hunt",
+                    "rating": 95.4079530663303,
+                    "summary": "RPG and sequel to The Witcher 2 (2011), The Witcher 3 follows witcher Geralt of Rivia as he seeks out his former lover and his young subject while intermingling with the political workings of the wartorn Northern Kingdoms. Geralt has to fight monsters and deal with people of all sorts in order to solve complex problems and settle contentious disputes, each ranging from the personal to the world-changing.",
+                    "url": "https://www.igdb.com/games/the-witcher-3-wild-hunt"
+                },
+                {
+                    "id": 94873,
+                    "first_release_date": 1531785600,
+                    "name": "Sonic Mania Plus",
+                    "rating": 95.3500902580676,
+                    "summary": "Sonic Mania Plus is an expanded version of Sonic Mania. \n \nIt's the ultimate Sonic celebration! Sonic returns in a new 2D platforming high speed adventure, and he's not alone! \n \nDeveloped in collaboration between SEGA, Christian Whitehead, Headcannon, and PagodaWest Games, experience new zones and remixed classic levels with Sonic, Tails, and Knuckles!",
+                    "url": "https://www.igdb.com/games/sonic-mania-plus"
+                },
+                {
+                    "id": 135450,
+                    "first_release_date": 1498780800,
+                    "name": "Crash Bandicoot 2: Cortex Strikes Back - N. Sane Trilogy",
+                    "rating": 95.1937003221402,
+                    "summary": "A remake of Crash Bandicoot 2: Cortex Strikes Back found in the Crash Bandicoot N. Sane Trilogy collection.",
+                    "url": "https://www.igdb.com/games/crash-bandicoot-2-cortex-strikes-back-n-sane-trilogy"
+                },
+                {
+                    "id": 109287,
+                    "first_release_date": 1537833600,
+                    "name": "Hollow Knight: Voidheart Edition",
+                    "rating": 95.1481732798413,
+                    "summary": "\"Explore twisting caverns, ancient cities and deadly wastes. Battle tainted creatures and befriend bizarre bugs. Uncover ancient history and solve mysteries buried at the kingdom's heart.\n\nHollow Knight Voidheart Edition includes:\n- The original, award winning, action adventure.\n- 4 giant Content Packs, built in at launch, expanding the game with all new quests, terrifying boss fights and striking new abilities.\n\nGame Features\n- Classic side-scrolling action, with all the modern trimmings.\n- Forge your own path! The world of Hallownest is expansive and open.\n- Evolve with powerful new skills and abilities!\n- Equip Charms! Ancient relics that offer bizarre new powers and abilities.\n- An enormous cast of cute and creepy characters all brought to life with traditional 2D frame-by-frame animation.\n- An epic orchestral score, with over 40 tracks!\n- Over 150 enemies with 40 epic bosses!\"",
+                    "url": "https://www.igdb.com/games/hollow-knight-voidheart-edition"
+                },
+                {
+                    "id": 19560,
+                    "first_release_date": 1524182400,
+                    "name": "God of War",
+                    "rating": 95.0701375077024,
+                    "summary": "\"It is a new beginning for Kratos. Living as a man, outside the shadow of the gods, he seeks solitude in the unfamiliar lands of Norse mythology. With new purpose and his son at his side, Kratos must fight for survival as powerful forces threaten to disrupt the new life he has created...\"",
+                    "url": "https://www.igdb.com/games/god-of-war--1"
+                },
+                {
+                    "id": 51820,
+                    "first_release_date": 978220800,
+                    "name": "Heroes of Might and Magic III: Complete",
+                    "rating": 95.06314984456839,
+                    "summary": "This compilation contains:\n\n- Heroes of Might and Magic III: The Restoration of Erathia (base game)\n- Heroes of Might and Magic III: Armageddon's Blade (add-on)\n- Heroes of Might and Magic III: The Shadow of Death (add-on)\n\nWhen Erathia's King Gryphonheart is murdered by traitors he is resurrected as an undead warlord who leads a ruthless invasion of his former Kingdom. Little resistance is met until his daughter Catherine, Queen of Enroth, returns to her homeland commanding an army of elite Enrothian warriors. Meanwhile the Necromancers raise large hordes of undead and advance towards the Erathian capitol. Queen Catherine receives the aid of her father's survived generals and embarks on a crusade to reclaim her lost land.\n\nYou control the greatest heroes and fiercest creatures in a conflict of epic proportions, as Cathereine fights to restore her family's rightful reign, uncover her father's killers and free him from the dark prison of his undead body!",
+                    "url": "https://www.igdb.com/games/heroes-of-might-and-magic-iii-complete"
+                },
+                {
+                    "id": 86295,
+                    "first_release_date": 1551916800,
+                    "name": "Tick Tock: A Tale for Two",
+                    "rating": 95.0563769817175,
+                    "summary": "You and your friend find yourselves trapped in two magical clockworlds where you have to solve puzzles to escape. Neither of you have the whole picture so the only way to get out is to communicate what you see to the other player. Play on two devices, local or remotely, all you need is a voice connection.",
+                    "url": "https://www.igdb.com/games/tick-tock-a-tale-for-two"
+                },
+                {
+                    "id": 98753,
+                    "first_release_date": 1535587200,
+                    "name": "My Grandfather's Farm",
+                    "rating": 95.0439882697947,
+                    "summary": "\"Your grandfather left you his old farm. With only a few coins and tools and with the help of your grandfather you have to go to the old farm \ngive new shine again! \n \nCan you live from what the land has to offer you? \n \nGive the old farm a new lease of life - expand your farm. Buy new fields, stables, equipment and animals. \nFarm your animals, farm your fields. \nSell ​​your goods to dealers or directly to the inhabitants of Lodo Paws to build your yard! Make friends with the inhabitants of Lodo Paws. \nHarvest various types of crops, potatoes, carrots, wheat, corn, sunflowers. Take care of your animals (cows, sheep, chickens, horses). \nWatch for the seasons to catch up with your harvest in time. \nCut down trees and transport the wood or your goods by horse and cart. \n \nAdapt your farmer! Buy new clothes or change your outfit! \n \nExplore Lodo Paws, explore the Thunder Mine and find valuable treasures. \nComplete tasks and quest's.\"",
+                    "url": "https://www.igdb.com/games/my-grandfathers-farm"
+                },
+                {
+                    "id": 142289,
+                    "first_release_date": 1520985600,
+                    "name": "Two Hours One Life",
+                    "rating": 95.0,
+                    "summary": "A fork of the One Hour One Life that explore a less restrictive setting and give players significantly more liberty to explore the world, its unique mechanics and large collection craftable items and objects. The private aspect, regarded as undesirable and futile on the original production, is also considerably more pronounced in this diversion. \n \nThe game management team maintain a Discord community in which they themselves are active members, causing a good portion of the game to also be shaped by the community. That is more evident on the extensive use of graphic content based on art created by members of the community and submitted for use in the game. \n \nA source code repository is also maintained on Github and on several occasions code submitted by users were accepted and later implemented into the game.",
+                    "url": "https://www.igdb.com/games/two-hours-one-life"
+                },
+                {
+                    "id": 83876,
+                    "first_release_date": 1419984000,
+                    "name": "Titanfall: Deluxe Edition",
+                    "rating": 95.0,
+                    "summary": "This Deluxe Edition contains: \n \n- Titanfall (base game) \n- Titanfall: Season Pass (DLC)",
+                    "url": "https://www.igdb.com/games/titanfall-deluxe-edition"
+                },
+                {
+                    "id": 83535,
+                    "first_release_date": 1521072000,
+                    "name": "Neonwall",
+                    "rating": 95.0,
+                    "summary": "Travel through a world of neon, overcoming obstacles and traps. This experience requires focus, concentration, and timing to let the ball rolling as fast as you can. Remember... in a world made of neons... you will need balls to survive.",
+                    "url": "https://www.igdb.com/games/neonwall"
+                },
+                {
+                    "id": 138950,
+                    "first_release_date": 1616716800,
+                    "name": "Monster Hunter Rise",
+                    "rating": 94.8885691634613,
+                    "summary": "Rise to the challenge and join the hunt! \n \nHunt solo or in a party with friends to earn rewards that you can use to craft a huge variety of weapons and armor. Brand new gameplay systems such as the high-flying ‘Wire Action’ and your canine companion ‘Palamute’ will add exciting new layers to the already robust combat that Monster Hunter is known for.",
+                    "url": "https://www.igdb.com/games/monster-hunter-rise"
+                },
+                {
+                    "id": 37138,
+                    "first_release_date": 1166140800,
+                    "name": "Sengoku Rance",
+                    "rating": 94.87427129308051,
+                    "summary": "Sengoku Rance (also known as \"Rance 7\") is the tenth release of the Rance series launched by Alicesoft. The story takes place during the 4th sengoku (warring states) era of JAPAN, an area of the Rance World which parodies medieval real-world Japan.",
+                    "url": "https://www.igdb.com/games/sengoku-rance"
+                },
+                {
+                    "id": 25513,
+                    "first_release_date": 874886400,
+                    "name": "Pilot Brothers",
+                    "rating": 94.87325773719479,
+                    "summary": "The case of the stolen elephant! \nElephant... Rare... Striped. \n...has been kept for many years by an animal trader named Karbophos. \nBeing unable to overcome abuse, it escaped and found a home at the zoo in our city. \nThis is definitely Karbophos's work. \nTo the zoo!",
+                    "url": "https://www.igdb.com/games/pilot-brothers"
+                },
+                {
+                    "id": 28323,
+                    "first_release_date": 1502150400,
+                    "name": "Mega Man Legacy Collection 2",
+                    "rating": 94.82141393411521,
+                    "summary": "A compilation of four timeless adventures in one package, Mega Man Legacy Collection 2 features the most recent entries in the classic side-scrolling series. The collection also includes a Museum jam-packed with history and production art, challenge remix stages for long-time fans, and first-timer friendly options like added armour and checkpoint saves for easy reload.\n\nJourney through the later entries in the series with these four titles: Mega Man 7 introduced mysterious rival Bass and his companion Treble, while Mega Man 8 featured the series’ first impressively animated and fully voiced cutscenes; Mega Man 9 marked the series’ return to its roots with 8-bit visuals, music, and gameplay; Mega Man 10 retained these features and included three playable character options.",
+                    "url": "https://www.igdb.com/games/mega-man-legacy-collection-2"
+                },
+                {
+                    "id": 8750,
+                    "first_release_date": 1438041600,
+                    "name": "N++",
+                    "rating": 94.8034920419939,
+                    "summary": "N++ is a fast-paced, action-packed platformer set in the distant future. You play as a ninja, darting through obstacles, narrowly evading a slew of inadvertently homicidal enemy robots and collecting gold in a minimalist, sci-fi world. N++ is all about smooth physics, deftly controlling the speed and inertia of the character, and the awesome feeling of fluidly moving through each level.",
+                    "url": "https://www.igdb.com/games/n-plus-plus"
+                }
+                )
+
+
+        $table.bootstrapTable({
+            data: data,
+            columns: [
+                {field: 'name', title: 'Name'},
+                {field: 'rating', title: 'Rating'},
+                {field: 'url', title:'URL'},
+                {field: 'first_release_date', title: 'Release'}
+            ]
+        });
+    });
+</script>
+
+</body>
+
+</html>
