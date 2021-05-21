@@ -12,12 +12,23 @@ public class GamesController {
 
     private GameService gameService = new GameService();
 
+
+    @GetMapping(value = "/")
+    public String showHomePage(){
+        return "index";
+    }
+
     @GetMapping(value = "/mygames")
     public String showGamePage(Model model){
-        model.addAttribute("allgames", gameService.showAllGames() );
-        model.addAttribute("game1" , gameService.findByID(1));
-        model.addAttribute("address","Jerome ameystraat" );
-        return "games";
-
+        model.addAttribute("games" , gameService.showAllGames());
+        return "probeersel";
+    }
+    @GetMapping(value = ("/mytable"))
+    public String showTablePage(Model model){
+        return "tables";
+    }
+    @GetMapping(value = ("/ourproducts"))
+    public String showProductsPage(Model model){
+        return "products";
     }
 }

@@ -1,25 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
-		
-		<title>Ecommerce Video Game | Cart</title>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
-		<!-- Loading third party fonts -->
-		<link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700|" rel="stylesheet" type="text/css">
-		<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
-		<link href="../fonts/lineo-icon/style.css" rel="stylesheet" type="text/css">
-
-		<!-- Loading main css file -->
-		<link rel="stylesheet" href="../style.css">
-		<link rel="stylesheet" href="../logo.css">
-		
-		<!--[if lt IE 9]>
-		<script src="../js/ie-support/html5.js"></script>
-		<script src="../js/ie-support/respond.js"></script>
-		<![endif]-->
+	<head th:replace="fragments/header :: common_head">
 
 	</head>
 
@@ -29,52 +11,14 @@
 		<div id="site-content">
 			<div class="site-header">
 				<div class="container">
-					<a href="index.html" id="branding">
-						<div class="this">
-							<div class="perspective">
-								<div class="sq"></div>
-								<div class="s1"></div>
-								<div class="s2"></div>
-								<div class="s3"></div>
-								<div class="s4"></div>
-							</div>
-							<div class="text">gamepyramid</div>
-						</div>
-						<div class="logo-text">
-							<h1 class="site-title">Company name</h1>
-							<small class="site-description">Tagline goes here</small>
-						</div>
-					</a> <!-- #branding -->
 
-					<div class="right-section pull-right">
-						<a href="cart.html" class="cart"><i class="icon-cart"></i> 0 items in cart</a>
-						<a href="#" class="login-button">Login/Register</a>
-					</div> <!-- .right-section -->
+					<div th:insert="fragments/header :: linknavbar"></div>
 
-					<div class="main-navigation">
-						<button class="toggle-menu"><i class="fa fa-bars"></i></button>
-						<ul class="menu">
-							<li class="menu-item home current-menu-item"><a href="index.html"><i class="icon-home"></i></a></li>
-							<li class="menu-item"><a href="products.html">Accessories</a></li>
-							<li class="menu-item"><a href="products.html">Promotions</a></li>
-							<li class="menu-item"><a href="products.html">PC</a></li>
-							<li class="menu-item"><a href="products.html">Playstation</a></li>
-							<li class="menu-item"><a href="products.html">Xbox</a></li>
-							<li class="menu-item"><a href="products.html">Wii</a></li>
-							<li class="menu-item"><a href="tables.html">Table</a></li>
-						</ul> <!-- .menu -->
-						<div class="search-form">
-							<label><img src="../images/icon-search.png"></label>
-							<input type="text" placeholder="Search...">
-						</div> <!-- .search-form -->
-
-						<div class="mobile-navigation"></div> <!-- .mobile-navigation -->
-					</div> <!-- .main-navigation -->
 				</div> <!-- .container -->
 			</div> <!-- .site-header -->
 
 			<div class="home-slider">
-				<ul class="slides">
+				<ul style="margin-top: 8%;" class="slides">
 					<li data-bg-image="dummy/slide-1.jpg">
 						<div class="container">
 							<div class="slide-content">
@@ -86,7 +30,7 @@
 								<a href="cart.html" class="button">Add to cart</a>
 							</div>
 
-							<img src="../gamesmini/src/main/resources/assets/dummy/game-cover-1.jpg" class="slide-image">
+							<img src="src/main/resources/dummy/game-cover-1.jpg" class="slide-image">
 						</div>
 					</li>
 					<li data-bg-image="dummy/slide-2.jpg">
@@ -100,7 +44,7 @@
 								<a href="cart.html" class="button">Add to cart</a>
 							</div>
 
-							<img src="../gamesmini/src/main/resources/assets/dummy/game-cover-2.jpg" class="slide-image">
+							<img src="src/main/resources/dummy/game-cover-2.jpg" class="slide-image">
 						</div>
 					</li>
 					<li data-bg-image="dummy/slide-3.jpg">
@@ -114,7 +58,7 @@
 								<a href="cart.html" class="button">Add to cart</a>
 							</div>
 
-							<img src="../gamesmini/src/main/resources/assets/dummy/game-cover-3.jpg" class="slide-image">
+							<img src="src/main/resources/dummy/game-cover-3.jpg" class="slide-image">
 						</div>
 					</li>
 				</ul> <!-- .slides -->
@@ -133,7 +77,7 @@
 								<div class="product">
 									<div class="inner-product">
 										<div class="figure-image">
-											<a href="single.html"><img src="../gamesmini/src/main/resources/assets/dummy/game-1.jpg" alt="Game 1"></a>
+											<a href="single.html"><img src="src/main/resources/dummy/game-1.jpg" alt="Game 1"></a>
 										</div>
 										<h3 class="product-title"><a href="#">Alpha Protocol</a></h3>
 										<small class="price">$19.00</small>
@@ -146,7 +90,7 @@
 								<div class="product">
 									<div class="inner-product">
 										<div class="figure-image">
-											<a href="single.html"><img src="../gamesmini/src/main/resources/assets/dummy/game-2.jpg" alt="Game 2"></a>
+											<a href="single.html"><img src="src/main/resources/dummy/game-2.jpg" alt="Game 2"></a>
 										</div>
 										<h3 class="product-title"><a href="#">Grand Theft Auto V</a></h3>
 										<small class="price">$19.00</small>
@@ -159,7 +103,7 @@
 								<div class="product">
 									<div class="inner-product">
 										<div class="figure-image">
-											<a href="single.html"><img src="../gamesmini/src/main/resources/assets/dummy/game-3.jpg" alt="Game 3"></a>
+											<a href="single.html"><img src="src/main/resources/dummy/game-3.jpg" alt="Game 3"></a>
 										</div>
 										<h3 class="product-title"><a href="#">Need for Speed rivals</a></h3>
 										<small class="price">$19.00</small>
@@ -172,7 +116,7 @@
 								<div class="product">
 									<div class="inner-product">
 										<div class="figure-image">
-											<a href="single.html"><img src="../gamesmini/src/main/resources/assets/dummy/game-4.jpg" alt="Game 4"></a>
+											<a href="single.html"><img src="src/main/resources/dummy/game-4.jpg" alt="Game 4"></a>
 										</div>
 										<h3 class="product-title"><a href="#">Big game hunter</a></h3>
 										<small class="price">$19.00</small>
@@ -197,7 +141,7 @@
 								<div class="product">
 									<div class="inner-product">
 										<div class="figure-image">
-											<a href="single.html"><img src="../gamesmini/src/main/resources/assets/dummy/game-5.jpg" alt="Game 1"></a>
+											<a href="single.html"><img src="src/main/resources/dummy/game-5.jpg" alt="Game 1"></a>
 										</div>
 										<h3 class="product-title"><a href="#">Watch Dogs</a></h3>
 										<small class="price">$19.00</small>
@@ -211,7 +155,7 @@
 								<div class="product">
 									<div class="inner-product">
 										<div class="figure-image">
-											<a href="single.html"><img src="../gamesmini/src/main/resources/assets/dummy/game-6.jpg" alt="Game 2"></a>
+											<a href="single.html"><img src="src/main/resources/dummy/game-6.jpg" alt="Game 2"></a>
 										</div>
 										<h3 class="product-title"><a href="#">Mortal Kombat X</a></h3>
 										<small class="price">$19.00</small>
@@ -225,7 +169,7 @@
 								<div class="product">
 									<div class="inner-product">
 										<div class="figure-image">
-											<a href="single.html"><img src="../gamesmini/src/main/resources/assets/dummy/game-7.jpg" alt="Game 3"></a>
+											<a href="single.html"><img src="src/main/resources/dummy/game-7.jpg" alt="Game 3"></a>
 										</div>
 										<h3 class="product-title"><a href="#">Metal Gear Solid V</a></h3>
 										<small class="price">$19.00</small>
@@ -239,7 +183,7 @@
 								<div class="product">
 									<div class="inner-product">
 										<div class="figure-image">
-											<a href="single.html"><img src="../gamesmini/src/main/resources/assets/dummy/game-8.jpg" alt="Game 4"></a>
+											<a href="single.html"><img src="src/main/resources/dummy/game-8.jpg" alt="Game 4"></a>
 										</div>
 										<h3 class="product-title"><a href="#">Nascar '14</a></h3>
 										<small class="price">$19.00</small>
