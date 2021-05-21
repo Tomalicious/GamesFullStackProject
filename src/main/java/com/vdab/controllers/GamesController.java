@@ -27,6 +27,7 @@ public class GamesController {
     public String showTablePage(Model model){
         return "tables";
     }
+
     @GetMapping(value = ("/ourproducts"))
     public String showProductsPage(Model model){
         return "products";
